@@ -59,3 +59,9 @@ class ProducerConsumer:
             time.sleep(0.15)
         
         print(f"Consumer: Finished consuming. Destination has {len(self.destination_container)} items.")
+    
+    def get_destination(self):
+        """
+        Returns the destination container with all consumed items.
+        """
+        return self.destination_container
