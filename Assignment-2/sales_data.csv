@@ -1,0 +1,52 @@
+transaction_id,date,product_category,product_name,quantity,unit_price,total_amount,region,customer_id,payment_method
+TXN001,2024-01-15,Electronics,Laptop,1,1299.99,1299.99,North,CUST001,Credit Card
+TXN002,2024-01-16,Clothing,T-Shirt,3,25.50,76.50,South,CUST002,Cash
+TXN003,2024-01-17,Food,Organic Coffee,2,18.99,37.98,East,CUST003,Debit Card
+TXN004,2024-01-18,Electronics,Wireless Mouse,1,45.00,45.00,West,CUST004,Credit Card
+TXN005,2024-01-19,Books,Python Programming,2,49.99,99.98,North,CUST005,PayPal
+TXN006,2024-01-20,Clothing,Jeans,1,79.99,79.99,South,CUST001,Credit Card
+TXN007,2024-01-21,Electronics,Smartphone,1,899.99,899.99,East,CUST006,Credit Card
+TXN008,2024-01-22,Food,Artisan Bread,5,6.50,32.50,West,CUST007,Cash
+TXN009,2024-01-23,Books,Data Science Guide,1,65.00,65.00,North,CUST008,Debit Card
+TXN010,2024-01-24,Electronics,Headphones,2,149.99,299.98,South,CUST009,Credit Card
+TXN011,2024-01-25,Clothing,Winter Jacket,1,199.99,199.99,East,CUST010,PayPal
+TXN012,2024-01-26,Food,Green Tea,3,12.99,38.97,West,CUST002,Cash
+TXN013,2024-01-27,Electronics,Tablet,1,549.99,549.99,North,CUST011,Credit Card
+TXN014,2024-01-28,Books,Machine Learning,1,89.99,89.99,South,CUST003,Debit Card
+TXN015,2024-01-29,Clothing,Sneakers,1,120.00,120.00,East,CUST012,Credit Card
+TXN016,2024-01-30,Electronics,USB-C Cable,4,15.99,63.96,West,CUST013,Cash
+TXN017,2024-02-01,Food,Almond Milk,2,8.99,17.98,North,CUST014,Debit Card
+TXN018,2024-02-02,Books,Web Development,3,39.99,119.97,South,CUST015,PayPal
+TXN019,2024-02-03,Electronics,Keyboard,1,89.99,89.99,East,CUST004,Credit Card
+TXN020,2024-02-04,Clothing,Sweater,2,55.00,110.00,West,CUST016,Credit Card
+TXN021,2024-02-05,Food,Protein Bars,10,3.50,35.00,North,CUST017,Cash
+TXN022,2024-02-06,Electronics,Monitor,1,399.99,399.99,South,CUST001,Credit Card
+TXN023,2024-02-07,Books,Cloud Computing,1,75.00,75.00,East,CUST018,Debit Card
+TXN024,2024-02-08,Clothing,Dress Shirt,2,65.00,130.00,West,CUST019,PayPal
+TXN025,2024-02-09,Electronics,Webcam,1,125.00,125.00,North,CUST020,Credit Card
+TXN026,2024-02-10,Food,Honey,2,15.99,31.98,South,CUST007,Cash
+TXN027,2024-02-11,Books,AI Fundamentals,1,95.00,95.00,East,CUST021,Credit Card
+TXN028,2024-02-12,Clothing,Running Shorts,3,35.00,105.00,West,CUST022,Debit Card
+TXN029,2024-02-13,Electronics,External SSD,1,179.99,179.99,North,CUST023,PayPal
+TXN030,2024-02-14,Food,Dark Chocolate,4,8.50,34.00,South,CUST024,Cash
+TXN031,2024-02-15,Electronics,Smart Watch,1,299.99,299.99,East,CUST006,Credit Card
+TXN032,2024-02-16,Books,Java Mastery,2,55.00,110.00,West,CUST025,Debit Card
+TXN033,2024-02-17,Clothing,Hoodie,1,75.00,75.00,North,CUST012,Credit Card
+TXN034,2024-02-18,Electronics,Laptop Sleeve,2,29.99,59.98,South,CUST026,Cash
+TXN035,2024-02-19,Food,Quinoa,3,12.00,36.00,East,CUST027,PayPal
+TXN036,2024-02-20,Books,DevOps Handbook,1,68.00,68.00,West,CUST028,Credit Card
+TXN037,2024-02-21,Electronics,Printer,1,249.99,249.99,North,CUST029,Debit Card
+TXN038,2024-02-22,Clothing,Socks,6,10.00,60.00,South,CUST030,Cash
+TXN039,2024-02-23,Food,Maple Syrup,1,22.99,22.99,East,CUST002,Credit Card
+TXN040,2024-02-24,Electronics,Router,1,179.99,179.99,West,CUST031,PayPal
+TXN041,2024-02-25,Books,React Native,2,45.00,90.00,North,CUST032,Debit Card
+TXN042,2024-02-26,Clothing,Belt,1,35.00,35.00,South,CUST033,Cash
+TXN043,2024-02-27,Electronics,Power Bank,2,55.00,110.00,East,CUST034,Credit Card
+TXN044,2024-02-28,Food,Coconut Oil,2,18.50,37.00,West,CUST035,Debit Card
+TXN045,2024-02-29,Electronics,Gaming Mouse,1,79.99,79.99,North,CUST036,PayPal
+TXN046,2024-03-01,Books,Docker Deep Dive,1,58.00,58.00,South,CUST037,Credit Card
+TXN047,2024-03-02,Clothing,Scarf,2,28.00,56.00,East,CUST038,Cash
+TXN048,2024-03-03,Electronics,USB Hub,3,25.00,75.00,West,CUST039,Debit Card
+TXN049,2024-03-04,Food,Chia Seeds,4,9.99,39.96,North,CUST040,Credit Card
+TXN050,2024-03-05,Electronics,Docking Station,1,159.99,159.99,South,CUST001,PayPal
+
