@@ -1,0 +1,9 @@
+# Python dependencies for Assignment 1: Producer-Consumer Pattern
+
+# Testing framework
+pytest>=7.0.0
+pytest-timeout>=2.1.0
+
+# Optional: For better test reporting
+pytest-html>=3.1.0
+

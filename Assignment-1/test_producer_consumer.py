@@ -1,8 +1,19 @@
+"""
+Producer-Consumer Pattern - Pytest Test Suite
+
+Run with: pytest test_producer_consumer.py -v -s
+  -v: verbose output
+  -s: show print statements
+"""
+
 import threading
 import time
+import queue
+import pytest
 from producer_consumer import ProducerConsumer
 
 
+@pytest.mark.basic
 def test_basic_synchronization():
     """
     Test 1: Basic Thread Synchronization
@@ -40,7 +51,14 @@ def test_basic_synchronization():
     print(f"  Destination: {pc.get_destination()}")
     print(f"  ✓ All {len(pc.get_destination())} items transferred successfully!")
     print()
+    
+    # Pytest assertions
+    assert len(pc.get_destination()) == 10, "Should transfer all 10 items"
+    assert pc.get_destination() == source, "Destination should match source"
+    assert pc.get_destination() == list(range(1, 11)), "Items should be 1-10 in order"
 
+
+@pytest.mark.edge_case
 def test_empty_source():
     """
     Test 2: Empty Source Container
@@ -73,8 +91,14 @@ def test_empty_source():
     print(f"  Destination: {pc.get_destination()}")
     print(f"  ✓ Handled empty source correctly!")
     print()
+    
+    # Pytest assertions
+    assert len(pc.get_destination()) == 0, "Destination should be empty"
+    assert pc.get_destination() == [], "Should handle empty source gracefully"
 
 
+@pytest.mark.blocking
+@pytest.mark.slow
 def test_blocking_queue():
     """
     Test 3: Blocking Queue Behavior
@@ -88,8 +112,6 @@ def test_blocking_queue():
     print("Producer is FAST (0.05s), Consumer is SLOW (0.5s)")
     print("Queue fills up quickly, forcing producer to BLOCK and WAIT")
     print()
-    
-    import queue
     
     # Create components for blocking demonstration
     source = list(range(1, 16))  # 15 items
@@ -151,8 +173,15 @@ def test_blocking_queue():
     print(f"  Destination: {len(destination)} items")
     print(f"  ✓ Blocking demonstrated! Producer had to WAIT multiple times!")
     print()
+    
+    # Pytest assertions
+    assert len(destination) == 15, "Should transfer all 15 items"
+    assert destination == source, "Destination should match source"
+    assert destination == list(range(1, 16)), "Items should be 1-15 in order"
 
 
+@pytest.mark.performance
+@pytest.mark.slow
 def test_large_dataset():
     """
     Test 4: Large Dataset Transfer
@@ -190,8 +219,14 @@ def test_large_dataset():
     print(f"  Time elapsed: {elapsed_time:.2f} seconds")
     print(f"  ✓ Large dataset transferred successfully!")
     print()
+    
+    # Pytest assertions
+    assert len(pc.get_destination()) == 50, "Should transfer all 50 items"
+    assert pc.get_destination() == source, "Destination should match source"
+    assert elapsed_time > 0, "Should measure execution time"
 
 
+@pytest.mark.data_types
 def test_mixed_data_types():
     """
     Test 5: Mixed Data Types
@@ -224,34 +259,13 @@ def test_mixed_data_types():
     print(f"  Destination: {pc.get_destination()}")
     print(f"  ✓ Mixed data types handled correctly!")
     print()
-
-def main():
-    """
-    Run all test scenarios to demonstrate producer-consumer pattern objectives.
-    """
-    print("\n" + "=" * 70)
-    print("PRODUCER-CONSUMER PATTERN - COMPREHENSIVE TEST SUITE")
-    print("=" * 70)
-    print()
     
-    # Run test case
-    test_basic_synchronization()
-    time.sleep(0.5)
-
-    test_empty_source()
-    time.sleep(0.5)
-    
-    test_blocking_queue()
-    time.sleep(0.5)
-    
-    test_large_dataset()
-    time.sleep(0.5)
-    
-    test_mixed_data_types()
-    
-    print("=" * 70)
-    print("ALL TESTS COMPLETED SUCCESSFULLY!")
-    print("=" * 70)
-
-if __name__ == "__main__":
-    main()
+    # Pytest assertions
+    assert len(pc.get_destination()) == 6, "Should transfer all 6 items"
+    assert pc.get_destination() == source, "Destination should match source exactly"
+    assert pc.get_destination()[0] == 1, "First item should be integer"
+    assert pc.get_destination()[1] == "hello", "Second item should be string"
+    assert pc.get_destination()[2] == 3.14, "Third item should be float"
+    assert pc.get_destination()[3] == {"key": "value"}, "Fourth item should be dict"
+    assert pc.get_destination()[4] == [1, 2, 3], "Fifth item should be list"
+    assert pc.get_destination()[5] is True, "Sixth item should be boolean"
