@@ -107,6 +107,12 @@ cd Intuit-Build-Challenge
 **For Assignment 1:**
 ```bash
 cd Assignment-1
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies and run tests
 pip install -r requirements.txt
 pytest test_producer_consumer.py -v -s
 ```
@@ -114,6 +120,12 @@ pytest test_producer_consumer.py -v -s
 **For Assignment 2:**
 ```bash
 cd Assignment-2
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies and run tests
 pip install -r requirements.txt
 pytest test_sales_analyzer.py -v -s
 ```
