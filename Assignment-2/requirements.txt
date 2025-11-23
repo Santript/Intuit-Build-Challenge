@@ -1,0 +1,10 @@
+# Python dependencies for Assignment 2: Sales Data Analysis
+
+# Data analysis and manipulation
+pandas>=2.0.0
+
+# Testing framework
+pytest>=7.4.0
+
+# Optional: For better test reporting
+pytest-html>=3.2.0
